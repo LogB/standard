@@ -1,5 +1,6 @@
 {
     "SHT21": {
+        "name": "SHT21",
         "voltage": "3v3",
         "connection": "I2C",
         "code": {
@@ -25,6 +26,7 @@
         }
     },
     "BMP180": {
+        "name": "BMP180",
         "voltage": "3v3",
         "connection": "I2C",
         "code": {
@@ -46,6 +48,7 @@
         }
     },
     "BH1750": {
+        "name": "BH1750",
         "voltage": "3v3",
         "connection": "I2C",
         "code": {
@@ -55,7 +58,7 @@
                 "begin": "lightMeter"
             },
             "values": {
-                "VISIBLE_LIGHT": {
+                "VISIBLE-LIGHT": {
                     "unit": "lx",
                     "getValue": "lightMeter.readLightLevel()"
                 }
@@ -63,6 +66,7 @@
         }
     },
     "SI1145": {
+        "name": "SI1145",
         "voltage": "3v3",
         "connection": "I2C",
         "code": {
@@ -72,7 +76,7 @@
                 "begin": "uv"
             },
             "values": {
-                "UV_LIGHT": {
+                "UV-INDEX": {
                     "unit": "index",
                     "getValue": "uv.UVindex()"
                 }
@@ -80,35 +84,37 @@
         }
     },
     "DS3231": {
+        "name": "DS3231",
         "voltage": "5v",
         "connection": "I2C",
         "code": {
             "include": "RTClib.h",
-            "preSetup": "RTC_DS3231 rtc;",
+            "preSetup": "RTC_DS3231 DS3231_TIME;",
             "setup": {
-                "begin": "rtc"
+                "begin": "DS3231_TIME"
             },
             "values": {
                 "TIME": {
                     "unit": "DateTime",
-                    "getValue": "rtc.now();"
+                    "getValue": "DS3231_TIME.now()"
                 }
             }
         }
     },
     "DS1307": {
+        "name": "DS1307",
         "voltage": "5v",
         "connection": "I2C",
         "code": {
             "include": "RTClib.h",
-            "preSetup": "RTC_DS1307 rtc;",
+            "preSetup": "RTC_DS1307 DS1307_TIME;",
             "setup": {
-                "begin": "rtc"
+                "begin": "DS1307_TIME"
             },
             "values": {
                 "TIME": {
                     "unit": "DateTime",
-                    "getValue": "rtc.now();"
+                    "getValue": "DS1307_TIME.now()"
                 }
             }
         }
