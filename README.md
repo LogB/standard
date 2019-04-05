@@ -1,3 +1,1 @@
-# standard
-This is the data standard of LogB
-HERE BE DRAGONS
+#Ez a LogB standardra épülő generáto(rok) konfigurációs fájlja(i)
