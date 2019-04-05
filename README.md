@@ -1,1 +1,1 @@
-#Ez a LogB standardra épülő generáto(rok) konfigurációs fájlja(i)
+# Ez a LogB standardra épülő generáto(rok) konfigurációs fájlja(i)
